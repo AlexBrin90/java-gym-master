@@ -4,9 +4,7 @@ import java.util.Objects;
 
 public class TimeOfDay implements Comparable<TimeOfDay> {
 
-    //часы (от 0 до 23)
     private int hours;
-    //минуты (от 0 до 59)
     private int minutes;
 
     public TimeOfDay(int hours, int minutes) {
@@ -33,11 +31,6 @@ public class TimeOfDay implements Comparable<TimeOfDay> {
         return Objects.hash(hours, minutes);
     }
 
-    public int getHours() {
-        return hours;
-    }
-
-    public int getMinutes() {
-        return minutes;
-    }
+    public int getHours() { return hours; }
+    public int getMinutes() { return minutes; }
 }
