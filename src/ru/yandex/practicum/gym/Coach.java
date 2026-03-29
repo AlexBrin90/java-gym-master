@@ -16,10 +16,16 @@ public class Coach {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Coach coach = (Coach) o;
-        return Objects.equals(surname, coach.surname) && Objects.equals(name, coach.name) && Objects.equals(middleName, coach.middleName);
+        return Objects.equals(surname, coach.surname)
+                && Objects.equals(name, coach.name)
+                && Objects.equals(middleName, coach.middleName);
     }
 
     @Override
@@ -27,7 +33,15 @@ public class Coach {
         return Objects.hash(surname, name, middleName);
     }
 
-    public String getSurname() { return surname; }
-    public String getName() { return name; }
-    public String getMiddleName() { return middleName; }
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
 }
