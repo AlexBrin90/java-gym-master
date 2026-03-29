@@ -12,13 +12,22 @@ public class CounterOfTrainings {
         this.count = count;
     }
 
-    public Coach getCoach() { return coach; }
-    public int getCount() { return count; }
+    public Coach getCoach() {
+        return coach;
+    }
+
+    public int getCount() {
+        return count;
+    }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         CounterOfTrainings that = (CounterOfTrainings) o;
         return count == that.count && Objects.equals(coach, that.coach);
     }
@@ -30,9 +39,9 @@ public class CounterOfTrainings {
 
     @Override
     public String toString() {
-        return "CounterOfTrainings{" +
-                "coach=" + coach +
-                ", count=" + count +
-                '}';
+        return "CounterOfTrainings{"
+                + "coach=" + coach
+                + ", count=" + count
+                + '}';
     }
 }
