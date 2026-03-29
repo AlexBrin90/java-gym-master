@@ -44,7 +44,7 @@ public class Timetable {
         TreeMap<TimeOfDay, List<TrainingSession>> daySchedule = timetable.get(dayOfWeek);
         List<TrainingSession> sessions = daySchedule.get(timeOfDay);
 
-        return sessions != null ? new ArrayList<>(sessions) : new ArrayList<>();
+        return sessions != null ? sessions  : new ArrayList<>();
     }
 
     public List<CounterOfTrainings> getCountByCoaches() {
